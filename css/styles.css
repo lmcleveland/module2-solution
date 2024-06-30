@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: orange;
+}
+
+header {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+.section {
+    border: 1px solid black;
+    background-color: pink;
+    padding: 4em 2em 2em;
+    margin: 1em 0;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+.section1 .title {
+  background-color: #ff9999;
+  color: #fff;
+}
+
+.section2 .title{
+  background-color: #99cc99;
+  color: #000;
+}
+
+.section3 .title{
+  background-color: #9999ff;
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+    .container {
+        display: flex;
+    }
+    .section {
+        flex: 1;
+        margin: 1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section {
+        flex: 1 1 48%; /* Adjusted width to accommodate margin */
+        margin: 1%; /* Added margin to create space between sections */
+    }
+    .section3 {
+        flex: 1 1 100%;
+        margin-top: 1em; /* Ensures section 3 has top margin */
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
